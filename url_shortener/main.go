@@ -21,6 +21,8 @@ func main() {
 	router.HandleFunc("POST /shorten", func(w http.ResponseWriter, r *http.Request) {
 
 		requestData := ShorterRequest{}
+		fmt.Println("Received request") //debug
+
 		err := json.NewDecoder(r.Body).Decode(&requestData)
 		if err != nil {
 			fmt.Println("JSON decode error:", err) //debug
