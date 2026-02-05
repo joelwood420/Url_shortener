@@ -17,7 +17,7 @@ type ShorterResponse struct {
 	ShortURL string `json:"short_url"`
 }
 
-var urlMap = make(map[string]string) // In-memory storage: short_code -> long_url
+var urlMap = make(map[string]string)
 
 func main() {
 	router := http.NewServeMux()
